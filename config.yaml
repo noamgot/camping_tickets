@@ -1,0 +1,20 @@
+mailer:
+  sender: <sender email>
+  receivers: 
+    - <additional receivers email>
+  send_to_sender: true  # whether the sender is also a reciever of the mail
+  gmail_password_token: abcdefghijklmnop  # your Gmail application-specific password; 
+  # assuming you use 2FA, see here how to setup such password: https://support.google.com/accounts/answer/185833?hl=en-GB
+  subject: 🌴 מצאנו תאריכים פנויים להזמנת קמפינג בחורשת טל! 🌴  # mail subject
+
+dates_finder:
+  num_adults: 2 # 18 <= 
+  num_children: 2 # 5-18
+  num_infants: 1 # < 5
+  possible_dates:
+    # in order to add more dates, use the following format:
+    # - !!python/tuple [YYYY-MM-DD, YYYY-MM-DD]  # [start date, end date]
+    # example:
+    - !!python/tuple [2022-08-01, 2022-08-03]
+main_scheduler:
+  break_when_found: false  # close the application when dates are found
